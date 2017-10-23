@@ -2869,12 +2869,12 @@ button.nav-toggle{
 
 .bootstrap-datetimepicker-widget.pull-right:before {
 	left: auto;
-	right: 6px;
+	right: 1px;
 }
 
 .bootstrap-datetimepicker-widget.pull-right:after {
 	left: auto;
-	right: 7px;
+	right: 2px;
 }
 
 .bootstrap-datetimepicker-widget > ul {
