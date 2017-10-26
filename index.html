@@ -552,8 +552,9 @@
 						</div>
 					</div>
 					<div class="col-md-12 subscribe-form">
+
 						<div class="subscribe-form-inner">
-							<form class="dv-form" dv-service="dvmailchimp" action="mailto:grace9796@gmail.com" method="post" enctype="text/plain">
+							<form class="dv-form" id="form" enctype="text/plain">
 								<div class="row">
 									<div class="col-md-3 col-sm-6 col-xs-12">
 										<div class="form-group">
@@ -647,5 +648,21 @@
 	<script type="text/javascript" src="js/carousel.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="mail/form-triger.js"></script>
+	<script>
+		var form = $('#form'),
+		url = 'https://script.google.com/macros/u/1/s/AKfycbwn6852HYTCcgL8R_tTDGVeVIrk_jxxvz33oBurkGAfE23xjXKh/exec'
 
+	$('#submit_btn7').on('click', function(e) {
+	e.preventDefault();
+	var jqxhr = $.ajax({
+		url: url,
+		method: "GET",
+		dataType: "json",
+		data: form.serialize()
+	}).success(
+		// do something
+		alert("Ok. Thanks")
+	);
+	})
+	</script>
 </body>
